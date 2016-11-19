@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>百度一下，你就知道</title>
+	<link rel="stylesheet" type="text/css" href="css/Initialization.css" />
+	<link rel="stylesheet" type="text/css" href="css/baidu.css"/>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/baidu.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div class="top">
+    	<div class="title">
+    		<ul>
+    			<li class="mover"><a class="margin-right  setposition" href="#">设置</a>
+    				<div class="divlist">
+    					<i class="striange"></i>
+	    				<ul class="setlist">
+				            <li><a  href="">搜索设置</a></li>
+				            <li><a  href="">高级搜索</a></li>
+				            <li><a  href="">关闭预测</a></li>
+				            <li><a  href="">搜索历史</a></li>
+			           </ul>
+    				</div>
+    			</li>
+    			<li><a class="margin-right"  href="javascript:void(0);" onclick="loginshow()">登录</a></li>
+    			<li><a class="bold" href="#">贴吧</a></li>
+    			<li><a class="bold" href="#">视频</a></li>
+    			<li><a class="bold" href="#">地图</a></li>
+    			<li><a class="bold" href="#">hao123</a></li>
+    			<li><a class="bold" href="#">新闻</a></li>
+    			<li><a class="bold" href="#">糯米</a></li>
+    		</ul>
+    	</div>
+    	<input id="moreproduct" class="list"  type="submit" value="更多产品" />
+    		<div id="morepr" class="moreproducts" >
+    			<div class="morepr-text"><span>更多产品</span></div>
+    			<hr class="hr-more" />
+    			<a href=""><span class="icon-music"></span>音乐</a>
+    			<hr class="hr-more" />
+    			<a href=""><span class="icon-pic"></span>图片</a>
+    			<hr class="hr-more" />
+    			<a href=""><span class="icon-know"></span>知道</a>
+    			<hr class="hr-more" />
+    			<a href=""><span class="icon-library"></span>文库</a>
+    			<hr class="hr-more" />
+    			<a href=""><span class="icon-prominent"></span>风云榜</a>
+    			<hr class="hr-more" />
+    			<a style="margin-top: 15px;" href=""><span >全部产品&gt;&gt;</span></a>
+    		</div>
+    </div>
+    <div id="transparentbg" class="transparentbackground" style="display: none;"></div>
+    <div id="loginid" class="loginfield" style="display: none;">
+    	<div id="loginheadid" class="loginheader">
+    		<i class="baidu-icon"></i>
+    		<span class="login-headtext">登录百度账号</span>
+    		<i class="loginclose-icon" onclick="loginclose()"></i>
+    	</div>
+    	<div class="loginoutside">
+    		<form class="loginform" action="" method="post">
+    			<div class="interval"></div>
+    			<div class="login-phonemessage">
+    				<i class="phone-icon"></i>
+    		        <a class="message-text">短息快捷登录</a>
+    			</div>
+    			<p id="paccountid" class="paccount">
+    				<i id="idaccount-icon" class="account-icon"></i>
+    				<input class="inputaccount" type="text" name="" id="account" placeholder="手机/邮箱/用户名" value="" />
+    			</p>
+    			<p id="ppasswordid" class="paccount">
+    				<i id="idpassword-icon" class="password-icon"></i>
+    				<input class="inputaccount" type="password" name="" id="password" placeholder="密码" value="" />
+    			</p>
+    			<div class="logincheck">
+    				<input class="autol-checkbox" type="checkbox" name="" id="" value="" />
+    				<span class="automaticlogin">下次自动登录</span>
+    				<a class="loginproblem" href="">登录遇到问题</a>
+    			</div>
+    			<p class="btnlogin">
+    				<input class="buttonlogin" type="submit" name="" id="" value="登录" />
+    			</p>
+    			<div class="registernow">
+    				<a class="registernow-text" href="javascript:void(0);">立即注册</a>
+    			</div>
+    		</form>
+    		<div class="loginfoot">
+    			<div class="lf-interval"></div>
+    			<hr class="lgf-hr" />
+    			<div class="wayslogin">
+    				<span>可以使用以下方式登录</span>
+    				<div class="waysloginQW">
+    					<a class="waysloginQQ-icon" href=""></a>
+    					<a class="waysloginWeibo-icon" href=""></a>
+    				</div>
+    			</div>
+    			<div class="halfangle-Qrcode"></div>
+    		</div>
+    	</div>
+    </div>
+    <div class="body">
+    	<div class="picture">
+    		<img class="logo" src="img/baidu.png"/>
+    	</div>
+    	<div class="search">
+    		<span id="spantext" class="inputspan">
+    			<input class="input" type="text" name="" id="inputtext" value="" />
+    			<!--<i id="uploadpicture" class="uploadpic"></i>-->
+    			<button id="uploadpicture" class="uploadpic"></button>
+    		</span>
+    		<input id="baidubtn" class="btn" type="submit" value="百度一下" />
+    	</div>
+    	<div class="bodyheight">                          <!--uploadpic-->
+    		<div id="upbox" class="uppicture">
+    			<div class="pic-input">
+    				<span  class="pic-inputspan">
+    			        <input class="imageurl-input" type="text" name="" id="" value="" placeholder="在此住粘贴图片网址" />
+	    		   </span>
+	    		   <span class="pic-btn"><i class="pic-camera"></i></span>
+    			</div>
+    			<div class="DragandDropPic">
+    				<span class="DDP-text">拖拽图片到这里</span>
+    				<i class="DDP-icon"></i>
+    			</div>
+    			<div class="localupload">
+    				<div class="localupcenter">
+    				<i class="uparrow-icon"></i>
+    				<span class="uploadbtn-text">本地上传图片</span>
+    				</div>
+    				<input class="localup-btn" type="submit" name="" id="" value="" />
+    			</div>
+    			<div class="uploadclose"><i id="close-click" class="uploadclose-icon"></i></div>
+    		</div>
+    	</div>
+    </div>
+    <div class="foot">
+    	<div class="left1">
+    		<img  src="img/shoujibaidu.png" alt="手机百度" />
+    			<ul>
+    				<li class="text1">手机百度</li>
+    				<li class="text2">快人一步</li>
+    			</ul>
+    	</div>
+    	<div class="left2">
+    		<img  src="img/baidunuomi.png" alt="百度糯米" />
+    			<ul>
+    				<li class="text1">百度糯米</li>
+    				<li class="text2">一元大餐</li>
+    			</ul>
+    	</div>
+    	<div class="right">
+    		<div class="right-top">
+    			<div class="link">
+    				<a class="text2 text-decoration" href="javascript:void(0);">把百度设为主页</a>
+    				<a class="text2 text-decoration" href="javascript:void(0);">关于百度</a>
+    				<a class="text2 text-decoration" href="javascript:void(0);">About Baidu</a>
+    				<a class="text2 text-decoration" href="javascript:void(0);">百度推广</a>
+    			</div>
+    		</div>
+    		<div class="right-body">
+    			<p class="text2 float-left">&copy;2016 Baidu <a href="#" class="text-decoration">使用百度前必读</a> <a href="#" class="text-decoration">意见反馈</a> 京ICP证030173号</p>
+    			<i class="icon-hao float-left"></i>
+    		</div>
+    		<div class="right-foot">
+    			<i class="icon"></i>
+    			<p class="text2 text-decoration">京公网安备11000002000001号</p>
+    		</div>
+    	</div>
+    </div>
+</body>
+</html>

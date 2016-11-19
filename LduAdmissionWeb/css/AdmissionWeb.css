@@ -1,0 +1,417 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; } 
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; } 
+h1, h2, h3, h4, h5, h6{ font-size:100%; } 
+address, cite, dfn, em, var { font-style:normal; } 
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; } 
+small{ font-size:12px; } 
+ul, ol { list-style:none; } 
+a { text-decoration:none; } 
+a:hover { text-decoration:underline; } 
+sup { vertical-align:text-top; } 
+sub{ vertical-align:text-bottom; } 
+legend { color:#000; } 
+fieldset, img { border:0; } 
+button, input, select, textarea { font-size:100%; } 
+table { border-collapse:collapse; border-spacing:0; }
+/*初始化*/
+.headline{
+    width: 100%;
+    height: 38px;
+    background: #00843B;
+    min-width: 1075px;
+    border-bottom: 1px solid #CDCDCD;
+    min-width: 1340px;
+}
+.hl-center{
+    width: 1000px;
+    height: 38px;
+    margin: 0 auto;
+}
+.hlc-iconleft{
+    background: url(../img/img.png) no-repeat;
+    background-position: -38px -71px;
+    width: 30px;
+    height: 38px;
+    float: left;
+}
+.hl-center>span{
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    float: left;
+    line-height: 38px;
+}
+.hl-center>a{
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 12px;
+    float: right;
+    line-height: 38px;
+}
+.hlc-iconright{
+    background: url(../img/img.png) no-repeat;
+    background-position: 10px -71px;
+    width: 40px;
+    height: 38px;
+    float: right;
+}
+.headline:after{
+    clear: both;
+    width: 0;
+    height: 0;
+    content: ".";
+    display: block;
+    visibility: hidden;
+}
+.logo-navbar{
+    width: 100%;
+    height: 60px;
+    min-width: 1340px;
+    background: rgba(255,255,255,  0.9);
+    padding: 20px 0;
+    transition: all 1s; 
+    -moz-transition: all 1s; 
+    -webkit-transition: all 1s; 
+    -o-transition: all 1s;
+}
+.logo-navbar-center{
+    width: 1000px;
+    height: 60px;
+    margin: 0 auto;
+}
+.changepadding{
+    padding: 20px 0;
+}
+.fixedheader{
+    position: fixed;
+    top: 0;
+    z-index: 1000000;
+    padding-top: 0;
+    padding-bottom: 10px;
+}
+.logo{
+    background: url(../img/img.png) no-repeat;
+    background-position: 0 0;
+    width: 230px;
+    height: 60px;
+    float: left;
+}
+.navbar{
+    width: 665px;
+    height: 60px;
+    float: right;
+}
+.navbar>ul>li{
+    width: 89px;
+    height: 40px;
+    margin-top: 28px;
+    text-align: center;
+    margin-left: 6px;
+    line-height: 40px;
+    float: left;
+}
+.navbar>ul>li:hover{
+    background: #FAFAFA;
+    border-radius: 6px;
+}
+.navbar>ul>li:hover ul{
+    display: block;
+}
+.navbar>ul>li>a:hover{
+    color: #00843B;
+}
+.navbar>ul>li>ul{
+    box-shadow: 1px 1px 2px #BBBBBB;
+    border: 2px solid #FFFFFF;
+    border-radius: 0 0 5px 5px;
+    z-index: 1000000;
+    display: none;
+    position: relative;/*浮动元素添加,使得z-index生效*/
+}
+.navbar>ul>li>ul>li{
+    background: #FFFFFF;
+}
+.navbar>ul>li>ul>li>a{
+    font-size: 14px;
+}
+.navbar>ul>li>ul>li:hover{
+    background: green;
+}
+.navbar>ul>li>ul>li:hover a{
+    color: #FFFFFF;
+}
+.navbar a{
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    color: #333333;
+    text-decoration: none;
+}
+/*------------------------------------------------------轮播图*/
+#banner {
+    position: relative;
+    width: 1340px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    min-width: 1340px;
+}
+
+.picture>li>a>img {
+    width: 1340px;
+    height: 400px;
+    border: 0;
+}
+.picture>li {
+    display: none;
+}
+#posbottom{
+    position: absolute;
+    bottom: 22px;
+    width: 204px;
+    height: 8px;
+    right: 42%;
+}
+#posbottom>li{
+    width: 32px;
+    height: 8px;
+    float: left;
+    margin:0 4px;
+    background: rgba(255,255,255, 0.6);
+    color: #000000;
+}
+#posbottom>li:hover{
+    cursor: pointer;
+}
+#posbottom:after{
+    clear: both;
+    width: 0;
+    height: 0;
+    content: ".";
+    display: block;
+    visibility: hidden;
+}
+#posbottom .on{
+    background: rgba(0,128,0, 0.6);
+}
+
+/*-------------------------------------------------------*/
+.contentout{
+    width: 100%;
+    height: 786px;
+    min-width: 1340px;
+}
+.content{
+    width: 1100px;
+    height: 750px;
+    margin: 0 auto;
+    font-family: "Microsoft YaHei";
+    border-top: 22px solid #FFFFFF;
+    border-bottom: 14px solid #FFFFFF;
+}
+
+.content-block{
+    width: 350px;
+    height: 240px;
+    background: #FFFFFF;
+    border: 1px solid  #DCDCDC;
+    border-radius: 5px;
+    float: left;
+    margin: 5px;
+}
+.content-block>h1{
+    height: 43px;
+    line-height: 45px;
+    margin-left: 24px;
+}
+.content-block>h1>a{
+    color: green;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+.content-block>hr{
+    border: 0;
+    border-top: 1px solid #DCDCDC;
+}
+.content-block>ul{
+    margin-top: 20px;
+    margin-left: 26px;
+
+}
+.content-block>ul>li{
+    width: 281px;
+    height: 24px;
+    overflow: hidden;
+}
+.content-block>ul>li>a{
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    line-height: 24px;
+    color: #313131;
+}
+.content-block>ul>li>a:hover{
+    color: green;
+}
+
+.admissionyears li{
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 22px;
+}
+.admissionyears hr{
+    border: 0;
+    border-top: 1px solid #CDCDCD;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.admissionyears a{
+    color: #313131;
+    text-decoration: none;
+}
+.admissionyears a:hover{
+    color: green;
+    cursor: pointer;
+}
+
+.floatyears>li{
+    width: 87px;
+    float: left;
+}
+.admissionyears>ul:last-child>li{
+    margin-top: 10px;
+}
+/*--------------------------------*/
+.commonproblems{
+    background: #2FAE36;
+}
+.commonproblems>h1>a{
+    color: #FFFFFF;
+}
+.commonproblems>p{
+    margin-left: 25px;
+    margin-top: 15px;
+    color: #FFFFFF;
+}
+.commonproblems>p>a{
+    color: #FFFFFF;
+    font-family: "Microsoft YaHei";
+    margin: 0 10px;
+}
+#professional{
+    overflow: hidden;
+}
+#professional:hover .oriiginimg{
+    display: none;
+}
+/*--------------------------------*/
+ #container{
+    position: relative;
+    width: 335px;
+    height: 230px;
+    border: 5px solid #FFFFFF;
+    overflow: hidden;
+}
+.pic>li {
+    display: none;
+}
+
+#position{
+    position: absolute;
+    z-index: 1000;
+    top: 5px;
+    left: 5px;
+    width: 70px;
+    height: 20px;
+}
+#position>li{
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    float: left;
+    margin-right: 1px;
+    background: rgba(0,0,0, 0.4);
+    color: #FFFFFF;
+}
+#position>li:hover{
+    cursor: pointer;
+    background: rgba(255,255,255, 0.4);
+    color: #000000;
+}
+#position:after{
+    clear: both;
+    width: 0;
+    height: 0;
+    content: ".";
+    display: block;
+    visibility: hidden;
+}
+#position .cur{
+    background: rgba(255,255,255, 0.4);
+    color: #000000;
+}
+/*----------------------------*/
+.floatyears:after{
+    clear: both;
+    width: 0;
+    height: 0;
+    content: ".";
+    display: block;
+    visibility: hidden;
+}
+.admissionyears span{
+    color: green;
+}
+.content-line:after{
+    clear: both;
+    width: 0;
+    height: 0;
+    content: ".";
+    display: block;
+    visibility: hidden;
+}
+footer{
+    width: 100%;
+    height: 180px;
+    background: #B8DEC8;
+    min-width: 1340px;
+}
+.footcenter{
+    width: 1087px;
+    height:180px;
+    margin: 0 auto;
+}
+.Qrcode{
+    margin-top: 25px;
+    margin-right: 18px;
+    float: left;
+}
+.Qrcode>img{
+    width: 90px;
+    height: 90px;
+}
+.Qrcode>p{
+    text-align: center;
+    width: 90px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+.Copyright{
+    width: 867px;
+    height: 90px;
+    margin-top: 25px;
+    float: left;
+}
+.Copyright>p{
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    margin-bottom: 40px;
+}
+.Copyright>p>span{
+    margin: 0 18px;
+}
